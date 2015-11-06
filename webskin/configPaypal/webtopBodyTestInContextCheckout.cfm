@@ -43,9 +43,9 @@
 				PAYMENTREQUEST_0_PAYMENTACTION="Sale",
 				ALLOWNOTE=0,
 				NOSHIPPING=1,
-				LOGOIMG="#(cgi.https eq "off")?"http":"https"#://#cgi.http_host##application.url.webtop#/images/brand.png",
-				RETURNURL="#(cgi.https eq "off")?"http":"https"#://#cgi.http_host##application.fapi.fixURL(addvalues="paypalReturn=1")#",
-				CANCELURL="#(cgi.https eq "off")?"http":"https"#://#cgi.http_host##application.fapi.fixURL(addvalues="paypalCancel=1")#"
+				LOGOIMG="#(cgi.https neq "on")?"http":"https"#://#cgi.http_host##application.url.webtop#/images/brand.png",
+				RETURNURL="#(cgi.https neq "on")?"http":"https"#://#cgi.http_host##application.fapi.fixURL(addvalues="paypalReturn=1")#",
+				CANCELURL="#(cgi.https neq "on")?"http":"https"#://#cgi.http_host##application.fapi.fixURL(addvalues="paypalCancel=1")#"
 			}>
 
 			<pre>#application.fc.lib.paypal.outputRequestData(stRequestData)#</pre>
