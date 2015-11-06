@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webtop>
+	<section id="admin">
+		<subsection id="paypal" sequence="90" label="PayPal">
+			<menu id="express" sequence="1" label="PayPal Express">
+				<menuitem sequence="1" id="status" label="API Status" typename="configPaypal" />
+			</menu>
+			<menu id="test" sequence="2" label="Checkout Testing">
+				<menuitem sequence="1" id="express" label="Express Checkout" typename="configPaypal" bodyview="webtopBodyTestExpressCheckout" />
+				<menuitem sequence="2" id="incontext" label="In-Context Checkout" typename="configPaypal" bodyview="webtopBodyTestInContextCheckout" />
+			</menu>
+			<menu id="log" sequence="3" label="Logs">
+				<menuitem sequence="1" id="log" label="Transaction Log" typename="paypalTransactionLog" />
+			</menu>
+		</subsection>
+	</section>
+</webtop>
