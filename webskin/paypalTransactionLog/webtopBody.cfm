@@ -4,6 +4,10 @@
 
 
 <cfset aColumns = listToArray("description,method,ack,correlationID,transactionID,datetimelastupdated")>
+<cfset aColumns[1] = structNew()>
+<cfset aColumns[1].name = "description">
+<cfset aColumns[1].webskin = "cellDescription">
+<cfset aColumns[1].title = "Description">
 <cfset aColumns[5] = structNew()>
 <cfset aColumns[5].name = "transactionID">
 <cfset aColumns[5].webskin = "cellTransactionID">
@@ -14,7 +18,7 @@
 	title="PayPal Transaction Log"
 	typename="paypalTransactionLog"
 	aCustomColumns="#aColumns#"
-	columnList="description,method,ack,correlationID,datetimelastupdated"
+	columnList="method,ack,correlationID,datetimelastupdated"
 	sortableColumns=""
 	lFilterFields="description,correlationID,transactionID"
 	sqlorderby="datetimelastupdated DESC"
