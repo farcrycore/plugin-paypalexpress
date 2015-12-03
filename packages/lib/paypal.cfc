@@ -8,7 +8,7 @@
 		<cfset var endpoint = "">
 
 		<cfif arguments.endpointType eq "live">
-			<cfset endpoint = "api-3t.paypal.com">
+			<cfset endpoint = "api-3t.paypal.com/nvp">
 		<cfelseif arguments.endpointType eq "sandbox">
 			<cfset endpoint = "api-3t.sandbox.paypal.com/nvp">
 		</cfif>
